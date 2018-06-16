@@ -13,6 +13,7 @@ class Artist
     if @@all.none? {|artist| artist.name == name}
       artist = Artist.new(name)
       @@all << artist
+      artist
     else
       @@all.select {|artist| artist.name == name}
     end
