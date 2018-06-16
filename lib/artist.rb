@@ -15,7 +15,7 @@ class Artist
       @@all << artist
       artist
     else
-      @@all.select {|artist| artist.name == name}
+      @@all.find {|artist| artist.name == name}
     end
   end
 
