@@ -9,11 +9,11 @@ class MP3Importer
 
   def files
     files = Dir.entries(@path)
-    files.select { |file| file.end_with?('mp3') }
+    files_import = files.select { |file| file.end_with?('mp3') }
     binding.pry
   end
 
   def import
-    self.files.each { |file| Song.new_by_filename(file) }
+    self.files_import.each { |file| Song.new_by_filename(file) }
   end
 end
