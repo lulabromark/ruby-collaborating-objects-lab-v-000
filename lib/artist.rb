@@ -16,6 +16,7 @@ class Artist
       artist
     else
       @@all.select {|artist| artist.name == name}
+      artist
     end
   end
 
