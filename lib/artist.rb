@@ -12,7 +12,7 @@ class Artist
   def self.find_or_create_by_name(name)
     if @@all.none? {|artist| artist.name == name}
       artist = Artist.new(name)
-      @@all << artist.name
+      @@all << self.name
     else
       @@all.select {|artist| artist.name == name}
     end
